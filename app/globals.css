@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -30,5 +32,5 @@ body a {
 }
 
 body a:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
