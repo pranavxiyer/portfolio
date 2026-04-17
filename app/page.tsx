@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react"
+import About from "@/components/about"
 import Footer from "@/components/footer"
 
 const names = ["Pranav Iyer", "प्रणव अय्यर", "பிரணவ் அய்யர்"]
@@ -17,17 +18,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen flex justify-center items-center">
-      <div className="flex flex-col items-start max-w-lg gap-4 px-6 w-full">
+    <main className="min-h-screen flex justify-center items-center px-6">
+      <div className="flex flex-col items-start max-w-lg w-full gap-4">
         <h1 className="text-2xl font-bold">{names[index]}</h1>
-
-        <div className="space-y-2">
-          <p>I'm a computer science graduate student at <a href="https://www.northwestern.edu/">Northwestern University</a>.</p>
-
-          <p>I completed my undergraduate studies in computer science at the <a href="https://www.berkeley.edu">University of California, Berkeley</a>, 
-            where I was affiliated with the <a href="https://www.humansleepscience.com/">Center for Human Sleep Science</a>.</p>
-        </div>
-
+        <About />
         <Footer />
       </div>
     </main>
