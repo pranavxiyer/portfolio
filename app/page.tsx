@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
     setIndex(i => (i + 1) % names.length)
-    }, 2000)
+    }, 2500)
 
     return () => clearInterval(interval)
   }, [])
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex justify-center items-center px-6">
       <div className="flex flex-col items-start max-w-lg w-full gap-4">
-        <h1 className="text-2xl font-bold">{names[index]}</h1>
+        <h1 key={index} className="text-2xl font-bold animate-fade">{names[index]}</h1>
         <About />
         <Footer />
       </div>
