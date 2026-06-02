@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import About from "@/components/about"
-import Footer from "@/components/footer"
+import Socials from "@/components/socials"
 
 const names = ["Pranav Iyer", "प्रणव अय्यर", "பிரணவ் அய்யர்"]
 
@@ -19,10 +19,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex justify-center items-center px-6">
-      <div className="flex flex-col items-start max-w-lg w-full gap-4">
-        <h1 key={index} className="text-2xl font-bold animate-fade">{names[index]}</h1>
+      <div className="flex flex-col items-start max-w-lg w-full gap-8">
+        <h1 key={index} className="text-3xl font-bold animate-fade">{names[index]}</h1>
         <About />
-        <Footer />
+        <Socials />
       </div>
     </main>
   );
