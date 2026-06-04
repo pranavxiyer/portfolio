@@ -32,6 +32,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-garamond), var(--font-cormorant), Arial, Helvetica, sans-serif;
+  background-image: radial-gradient(circle, #ffffff15 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 body a {
