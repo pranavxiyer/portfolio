@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   description: "portfolio",
   twitter: {
     card: "summary",
+    images: ["/opengraph-image.png"],
+  },
+  openGraph: {
+    images: ["/opengraph-image.png"]
   }
 };
 
