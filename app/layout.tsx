@@ -27,6 +27,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pranav Iyer",
   description: "portfolio",
+  twitter: {
+    card: "summary",
+  }
 };
 
 export default function RootLayout({
