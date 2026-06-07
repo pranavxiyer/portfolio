@@ -3,6 +3,10 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 
+interface SignatureProps {
+    startDelay?: number
+}
+
 const paths = [
   "M1105.79 223.354C1097.58 223.354 1120.37 216.763 1121.66 216.384C1135.89 212.2 1152.32 211.399 1166.96 214.061C1171.12 214.817 1178.93 216.553 1179.74 221.805C1180.96 229.741 1167.18 234.794 1161.93 237.293C1146.8 244.496 1131.17 250.647 1115.85 257.427C1108.69 260.599 1101.09 264.796 1093.4 266.72C1090.58 267.423 1098.05 263.115 1100.75 262.073",
   "M1129.79 215.222C1129.79 221.849 1125.91 229.471 1123.6 235.357C1117.34 251.297 1109.92 266.739 1103.46 282.595C1100.04 290.994 1096.87 299.496 1094.17 308.15C1093.39 310.645 1092.52 313.119 1091.46 315.507C1091.29 315.88 1091.36 316.957 1091.07 316.669C1090.34 315.938 1091.07 314.603 1091.07 313.571",
@@ -12,17 +16,17 @@ const paths = [
   "M1247.28 274.228C1246.03 273.728 1242.2 273.669 1243.41 273.066C1245.13 272.204 1260.46 267.459 1260.83 267.646C1264.85 269.656 1259.04 278.17 1266.64 277.326C1272.94 276.626 1292.58 263.54 1296.84 266.097C1297.17 266.296 1296.98 266.896 1296.84 267.258C1295.68 270.361 1285.89 280.184 1298 276.551C1300.55 275.787 1302.92 274.512 1305.36 273.454C1306.79 272.834 1308.2 272.163 1309.62 271.518"
 ]
 
-const strokeConfig = [
-  { delay: 0,   duration: 1.2 },
-  { delay: 0.2, duration: 1.0 },
-  { delay: 0.6, duration: 0.5 },
-  { delay: 1.0, duration: 0.5 },
-  { delay: 1.4, duration: 1.0 },
-  { delay: 1.8, duration: 0.6 },
-]
-
-export default function Signature() {
+export default function Signature({ startDelay = 0 }: SignatureProps) {
     const [key, setKey] = useState(0)
+
+    const strokeConfig = [
+      { delay: startDelay + 0,   duration: 1.2 },
+      { delay: startDelay + 0.2, duration: 1.0 },
+      { delay: startDelay + 0.6, duration: 0.5 },
+      { delay: startDelay + 1.0, duration: 0.5 },
+      { delay: startDelay + 1.4, duration: 1.0 },
+      { delay: startDelay + 1.8, duration: 0.6 },
+    ]
 
     return (
         <div className="flex flex=col items-center justify-center cursor-pointer" onClick={() => setKey(key => key + 1)}>

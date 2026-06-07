@@ -25,6 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pranavxiyer.com'),
   title: "Pranav Iyer",
   description: "portfolio",
   twitter: {
