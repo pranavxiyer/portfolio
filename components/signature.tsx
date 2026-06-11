@@ -29,14 +29,14 @@ export default function Signature({ startDelay = 0 }: SignatureProps) {
     ]
 
     return (
-        <div className="flex flex=col items-center justify-center cursor-pointer" onClick={() => setKey(key => key + 1)}>
+        <div className="flex-col items-center justify-center cursor-pointer" onClick={() => setKey(key => key + 1)}>
             <motion.svg key={key} viewBox="1070 189 259 150" className="h-25 w-50" fill="none">
                 {paths.map((d, i) => (
                     <motion.path key={i} d={d} stroke="#6b7280" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none"
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 1 }}
                     transition={
-                        { pathLength: { duration: strokeConfig[i].duration, ease: "easeInOut", delay: strokeConfig[i].delay },
+                        { pathLength: { duration: strokeConfig[i].duration, ease: "linear", delay: strokeConfig[i].delay },
                         opacity: { duration: 0, delay: strokeConfig[i].delay } }}
                     />
                 ))}
